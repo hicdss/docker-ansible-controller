@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ARG ANSIBLE_VERSION=2.7.11
+ARG ANSIBLE_VERSION=2.8.1-r0
 ARG ANSIBLE_LINT_VERSION=4.1.0
 
 ARG ANSIBLE_INVENTORY=/etc/ansible/hosts
@@ -29,7 +29,7 @@ RUN apk add --update --no-cache \
 	    openssl-dev \
 	    python-dev \
             libffi-dev \
-	&& pip install --no-cache-dir ansible-lint==${ANSIBLE_LINT_VERSION}
+	&& pip install --no-cache-dir ansible-lint==${ANSIBLE_LINT_VERSION} \
 	&& apk del .build-deps \
 	&& rm -rf ~/.cache/
 
