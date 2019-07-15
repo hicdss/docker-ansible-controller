@@ -29,7 +29,7 @@ RUN apk add --update --no-cache \
 	    openssl-dev \
 	    python-dev \
             libffi-dev \
-	&& pip install --no-cache-dir ansible-lint==${ANSIBLE_LINT_VERSION}
+	&& pip install --no-cache-dir ansible-lint==${ANSIBLE_LINT_VERSION} \
 	&& apk del .build-deps \
 	&& rm -rf ~/.cache/
 
