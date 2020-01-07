@@ -23,6 +23,7 @@ RUN apk add --update --no-cache \
 		make \
 		py-pip \
 		git \
+		curl \
 	&& apk add --no-cache --virtual .build-deps \
 	    gcc \
 	    libc-dev \
