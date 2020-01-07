@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ARG ANSIBLE_VERSION=2.8.1-r0
+ARG ANSIBLE_VERSION=2.9.2-r1
 ARG ANSIBLE_LINT_VERSION=4.1.0
 
 ARG ANSIBLE_INVENTORY=/etc/ansible/hosts
@@ -23,6 +23,7 @@ RUN apk add --update --no-cache \
 		make \
 		py-pip \
 		git \
+		curl \
 	&& apk add --no-cache --virtual .build-deps \
 	    gcc \
 	    libc-dev \
