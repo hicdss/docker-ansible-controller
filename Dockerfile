@@ -24,6 +24,7 @@ RUN apk add --update --no-cache \
 		py-pip \
 		git \
 		curl \
+		rsync \
 	&& apk add --no-cache --virtual .build-deps \
 	    gcc \
 	    libc-dev \
