@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ARG ANSIBLE_VERSION=2.9.1-r0
+ARG ANSIBLE_VERSION=2.9.3-r0
 ARG ANSIBLE_LINT_VERSION=4.1.0
 
 ARG ANSIBLE_INVENTORY=/etc/ansible/hosts
@@ -31,7 +31,7 @@ RUN apk add --update --no-cache \
 	    openssl-dev \
 	    python-dev \
             libffi-dev \
-	&& pip install --no-cache-dir ansible-lint==${ANSIBLE_LINT_VERSION} \
+	&& pip install --no-cache-dir ansible-lint==${ANSIBLE_LINT_VERSION} pywinrm \
 	&& apk del .build-deps \
 	&& rm -rf ~/.cache/
 
